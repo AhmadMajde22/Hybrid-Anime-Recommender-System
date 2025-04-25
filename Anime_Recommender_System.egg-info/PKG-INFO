@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: Anime-Recommender-System
+Version: 0.1
+Author: Ahmad Majdi
+Requires-Dist: numpy==2.2.5
+Requires-Dist: pandas==2.2.3
+Requires-Dist: setuptools==79.0.1
+Dynamic: author
+Dynamic: requires-dist
