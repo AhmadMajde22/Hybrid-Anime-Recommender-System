@@ -172,5 +172,5 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-venv
-Anime_Recommender_System.egg-info
+E:\CODES\MLOps_Udemy\Section_3_Hybrid_Anime_Recommender_System\Content\venv
+E:\CODES\MLOps_Udemy\Section_3_Hybrid_Anime_Recommender_System\Content\Anime_Recommender_System.egg-info
