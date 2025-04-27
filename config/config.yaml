@@ -1,6 +1,0 @@
-data_ingestion:
-  bucket_name: "anime-dataset"
-  bucket_file_name:
-    - "anime_with_synopsis.csv"
-    - "anime.csv"
-    - "animelist.csv"
