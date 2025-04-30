@@ -79,5 +79,6 @@ instance/
 
 # Ignore specific files and directories
 artifacts/raw/*
+artifacts/processed/*
 config/config.yaml
 config/credentials.json
