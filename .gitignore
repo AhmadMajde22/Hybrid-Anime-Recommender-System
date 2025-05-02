@@ -78,8 +78,7 @@ instance/
 .pypirc
 
 # Ignore specific files and directories
-artifacts/raw/*
-artifacts/processed/*
 artifacts/*
+!artifacts/*.dvc
 config/config.yaml
 config/credentials.json
