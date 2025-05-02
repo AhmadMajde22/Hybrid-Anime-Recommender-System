@@ -86,3 +86,4 @@ artifacts/model_checkpoint
 !artifacts/*.dvc
 config/config.yaml
 config/credentials.json
+/DVC_Bucket
