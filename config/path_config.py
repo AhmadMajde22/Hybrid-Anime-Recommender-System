@@ -33,3 +33,12 @@ USER2USER_DECODED = r"artifacts/processed/user2user_decoded.pkl"
 
 ANIME2ANIME_ENCODED = r"artifacts/processed/anime2anime_encoded.pkl"
 ANIME2ANIME_DECODED =r"artifacts/processed/anime2anime_decoded.pkl"
+
+
+## MODEL Training
+MODEL_DIR = r"artifacts/model"
+WEIGHTS_DIR = r"artifacts/weights"
+MODEL_PATH = os.path.join(MODEL_DIR,"model.h5")
+ANIME_WEIGHTS_PATH = os.path.join(WEIGHTS_DIR,"anime_weights.pkl")
+USER_WEIGHTS_PATH  = os.path.join(WEIGHTS_DIR,"user_weights.pkl")
+CHECKPOINT_FILE_PATH = r"artifacts/model_checkpoint/weights.weights.h5"
