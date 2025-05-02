@@ -1,4 +1,5 @@
 [core]
-    remote = myremote
-['remote "myremote"']
-    url = s3://dvcbucketamanime
+    remote = localremote
+
+['remote "localremote"']
+    url = E:/CODES/MLOps_Udemy/Section_3_Hybrid_Anime_Recommender_System/Content/DVC_Bucket
