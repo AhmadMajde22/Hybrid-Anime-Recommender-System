@@ -26,9 +26,20 @@ pipeline {
                     pip install --upgrade pip
                     pip install -e .
                     '''
-
                 }
             }
         }
+        stage('DVC Pull.....'){
+            steps {
+                script {
+                    echo 'DVC Pull.....'
+                    sh '''
+                    . ${VENV_DIR}/bin/activate
+                    dvc pull
+                    '''
+                }
+            }
+        }
+
     }
 }
