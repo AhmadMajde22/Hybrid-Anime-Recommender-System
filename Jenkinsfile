@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        KUBECONFIG = 'C:\\Users\\PC\\.kube\\config'  // Path to the kubeconfig file
+        KUBECONFIG = 'C:\\Users\\PC\\.kube\\config'  // Path to the kubeconfig file on your machine
         VENV_DIR = 'venv'
     }
 
