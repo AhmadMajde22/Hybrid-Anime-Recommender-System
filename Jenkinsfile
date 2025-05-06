@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     environment {
+        KUBECONFIG = 'C:\\Users\\PC\\.kube\\config'  // Path to the kubeconfig file
         VENV_DIR = 'venv'
     }
 
     stages {
-
-        stage('Cloning From GitHub.....') {
+        stage('Cloning From GitHub') {
             steps {
                 script {
                     echo 'Cloning From GitHub.....'
@@ -15,8 +15,7 @@ pipeline {
                 }
             }
         }
-
-        stage('Making Virtual Environment.....') {
+        stage('Making Virtual Environment') {
             steps {
                 script {
                     echo 'Making Virtual Environment.....'
@@ -25,22 +24,16 @@ pipeline {
                     . ${VENV_DIR}/bin/activate
                     pip install --upgrade pip
                     pip install -e .
-                    echo 'Virtual Environment setup complete.'
                     '''
                 }
             }
         }
-
         stage('Apply Kubernetes Deployment') {
             steps {
                 script {
                     echo 'Applying Kubernetes Deployment.....'
                     sh '''
                     kubectl apply -f deployment.yaml
-                    echo "Waiting for the deployment to complete..."
-                    kubectl rollout status deployment/dl-training-job --timeout=120s
-                    echo "Deployment logs:"
-                    kubectl logs deployment/dl-training-job
                     '''
                 }
             }
