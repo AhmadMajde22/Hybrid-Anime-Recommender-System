@@ -25,21 +25,10 @@ pipeline {
                     . ${VENV_DIR}/bin/activate
                     pip install --upgrade pip
                     pip install -e .
+                    echo 'Virtual Environment setup complete.'
                     '''
                 }
             }
         }
-        stage('DVC Pull.....'){
-            steps {
-                script {
-                    echo 'DVC Pull.....'
-                    sh '''
-                    . ${VENV_DIR}/bin/activate
-                    dvc pull
-                    '''
-                }
-            }
-        }
-
     }
 }
