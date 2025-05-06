@@ -22,7 +22,7 @@ pipeline {
                     echo 'Making Virtual Environment.....'
                     sh '''
                     python -m venv ${VENV_DIR}
-                    .${VENV_DIR}/Scripts/activate
+                    source ${VENV_DIR}/bin/activate
                     pip install --upgrade pip
                     pip install -e .
                     '''
