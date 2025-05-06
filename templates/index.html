@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hybrid Anime Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Background image via Jinja */
+        body {
+            background: url('{{ url_for("static", filename="background.jpg") }}') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Optional dark overlay for better readability */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.75);
+            min-height: 100vh;
+            width: 100%;
+            padding: 40px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="container">
+            <h1>Hybrid Anime Recommender</h1>
+
+            <!-- Input Form -->
+            <form method="post">
+                <input type="number" name="userID" placeholder="Enter User ID" required>
+                <button type="submit">Get Recommendations</button>
+            </form>
+
+            <!-- Error message -->
+            {% if error_message %}
+            <div class="error">
+                {{ error_message }}
+            </div>
+            {% endif %}
+
+            <!-- Recommendations -->
+            {% if recommendations %}
+            <div class="cards">
+                {% for anime in recommendations %}
+                <div class="card">
+                    <h2>{{ anime }}</h2>
+                </div>
+                {% endfor %}
+            </div>
+            {% elif recommendations is not none and not error_message %}
+            <p>No recommendations found.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>
